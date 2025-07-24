@@ -1,0 +1,17 @@
+streamlit
+faiss-cpu
+sentence-transformers
+pandas
+pdf2image
+pytesseract
+PyMuPDF
+python-docx
+scikit-learn
+groq
+
+
+streamlit
+faiss-cpu
+sentence-transformers
+httpx
+groq

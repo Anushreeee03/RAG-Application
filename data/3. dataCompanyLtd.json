@@ -1,0 +1,150 @@
+{
+  "company": "data Company Ltd.",
+  "report_period": "Q1 FY2025",
+  "currency": "Millions USD",
+  "pages": [
+    {
+      "page": 1,
+      "section": "Income Statement",
+      "data": [
+        {
+          "label": "Revenue",
+          "Q1_2025": 1250.5,
+          "Q4_2024": 1198.0,
+          "Q1_2024": 1100.3,
+          "change_vs_Q1_2024": "13.7%"
+        },
+        {
+          "label": "Cost of Goods Sold",
+          "Q1_2025": 745.2,
+          "Q4_2024": 720.1,
+          "Q1_2024": 689.5,
+          "change_vs_Q1_2024": "8.1%"
+        },
+        {
+          "label": "Gross Profit",
+          "Q1_2025": 505.3,
+          "Q4_2024": 477.9,
+          "Q1_2024": 410.8,
+          "change_vs_Q1_2024": "23.0%"
+        },
+        {
+          "label": "Operating Expenses",
+          "Q1_2025": 190.7,
+          "Q4_2024": 185.4,
+          "Q1_2024": 175.0,
+          "change_vs_Q1_2024": "8.9%"
+        },
+        {
+          "label": "Operating Income",
+          "Q1_2025": 314.6,
+          "Q4_2024": 292.5,
+          "Q1_2024": 235.8,
+          "change_vs_Q1_2024": "33.4%"
+        },
+        {
+          "label": "Interest Expense",
+          "Q1_2025": 12.4,
+          "Q4_2024": 11.8,
+          "Q1_2024": 10.9,
+          "change_vs_Q1_2024": "13.8%"
+        },
+        {
+          "label": "Net Income Before Tax",
+          "Q1_2025": 302.2,
+          "Q4_2024": 280.7,
+          "Q1_2024": 224.9,
+          "change_vs_Q1_2024": "34.3%"
+        },
+        {
+          "label": "Tax Expense",
+          "Q1_2025": 60.4,
+          "Q4_2024": 56.1,
+          "Q1_2024": 45.0,
+          "change_vs_Q1_2024": "34.2%"
+        },
+        {
+          "label": "Net Income",
+          "Q1_2025": 241.8,
+          "Q4_2024": 224.6,
+          "Q1_2024": 179.9,
+          "change_vs_Q1_2024": "34.4%"
+        },
+        {
+          "label": "Basic EPS (USD)",
+          "Q1_2025": 1.22,
+          "Q4_2024": 1.14,
+          "Q1_2024": 0.93
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "section": "Balance Sheet",
+      "data": [
+        {
+          "label": "Total Assets",
+          "Q1_2025": 3500.0,
+          "Q4_2024": 3400.0,
+          "Q1_2024": 3100.0,
+          "change_vs_Q1_2024": "12.9%"
+        },
+        {
+          "label": "Cash and Equivalents",
+          "Q1_2025": 580.0,
+          "Q4_2024": 560.0,
+          "Q1_2024": 500.0,
+          "change_vs_Q1_2024": "16.0%"
+        },
+        {
+          "label": "Accounts Receivable",
+          "Q1_2025": 450.0,
+          "Q4_2024": 430.0,
+          "Q1_2024": 400.0,
+          "change_vs_Q1_2024": "12.5%"
+        },
+        {
+          "label": "Inventory",
+          "Q1_2025": 300.0,
+          "Q4_2024": 290.0,
+          "Q1_2024": 280.0,
+          "change_vs_Q1_2024": "7.1%"
+        },
+        {
+          "label": "Total Liabilities",
+          "Q1_2025": 1800.0,
+          "Q4_2024": 1750.0,
+          "Q1_2024": 1650.0,
+          "change_vs_Q1_2024": "9.1%"
+        },
+        {
+          "label": "Short-term Debt",
+          "Q1_2025": 400.0,
+          "Q4_2024": 390.0,
+          "Q1_2024": 370.0,
+          "change_vs_Q1_2024": "8.1%"
+        },
+        {
+          "label": "Long-term Debt",
+          "Q1_2025": 800.0,
+          "Q4_2024": 780.0,
+          "Q1_2024": 750.0,
+          "change_vs_Q1_2024": "6.7%"
+        },
+        {
+          "label": "Shareholder Equity",
+          "Q1_2025": 1700.0,
+          "Q4_2024": 1650.0,
+          "Q1_2024": 1450.0,
+          "change_vs_Q1_2024": "17.2%"
+        },
+        {
+          "label": "Number of Shares Outstanding (Million)",
+          "Q1_2025": 198,
+          "Q4_2024": 197,
+          "Q1_2024": 194
+        }
+      ]
+    }
+  ]
+}
