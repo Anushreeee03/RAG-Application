@@ -1,7 +1,12 @@
 from groq import Groq
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Load variables from .env
+
+groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
-groq_client = Groq(api_key="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")
 
 def query_groq(context, question):
     prompt = f"""
