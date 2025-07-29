@@ -8,6 +8,8 @@ groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
 
+
+
 def query_groq(context, question):
     prompt = f"""
 You are a financial assistant. ONLY use the below context to answer the question.
