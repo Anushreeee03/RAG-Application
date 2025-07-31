@@ -4,7 +4,7 @@
     "precision": 1.0,
     "recall": 0.9,
     "f1": 0.947,
-    "avg_latency_sec": 0.452
+    "avg_latency_sec": 0.631
   },
   "results": [
     {
@@ -15,13 +15,13 @@
     },
     {
       "question": "What was TCS\u2019s revenue?",
-      "prediction": "195,772",
+      "prediction": "\u20b9195,772 Cr",
       "ground_truth": "\u20b9195,772 Cr",
       "fuzzy_score": 1.0
     },
     {
       "question": "What was Reliance\u2019s total revenue?",
-      "prediction": "10,00,122",
+      "prediction": "\u20b910,00,122 crore",
       "ground_truth": "\u20b910,00,122 Cr",
       "fuzzy_score": 1.0
     },
