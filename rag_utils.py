@@ -17,15 +17,17 @@ def fuzzy_match(pred: str, truth: str) -> float:
     truth_norm = normalize_answer(truth)
     return SequenceMatcher(None, pred_norm, truth_norm).ratio()
 
-def get_eval_metrics(pred, truth, threshold=0.85):
+
+def get_eval_metrics(pred, truth):
     score = fuzzy_match(pred, truth)
     y_true = [1]
-    y_pred = [1 if score >= threshold else 0]
+    y_pred = [1 if score >= 0.85 else 0]
 
     return {
         "fuzzy": round(score, 2),
-        "accuracy": accuracy_score(y_true, y_pred),
-        "precision": precision_score(y_true, y_pred, zero_division=0),
-        "recall": recall_score(y_true, y_pred, zero_division=0),
-        "f1": f1_score(y_true, y_pred, zero_division=0)
+        "accuracy": round(accuracy_score(y_true, y_pred), 2),
+        "precision": round(precision_score(y_true, y_pred, zero_division=0), 2),
+        "recall": round(recall_score(y_true, y_pred, zero_division=0), 2),
+        "f1": round(f1_score(y_true, y_pred, zero_division=0), 2)
     }
+
