@@ -1,3 +1,4 @@
+# utils/indexer.py
 import os
 import faiss
 import pickle
@@ -9,6 +10,7 @@ def create_faiss_index(embeddings, chunks, index_dir):
     index = faiss.IndexIVFFlat(quantizer, dim, 100)
     index.train(embeddings)
     index.add(embeddings)
+
 
     os.makedirs(index_dir, exist_ok=True)
     faiss.write_index(index, os.path.join(index_dir, "index.faiss"))
