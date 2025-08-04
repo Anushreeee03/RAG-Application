@@ -1,0 +1,35 @@
+A quarterly report is a summary or collection of unaudited financial statements, such as balance sheets, income statements, and cash flow statements. These reports must be filed by public companies as per the Securities Exchange Committee (SEC). Issued every quarter, these statements provide quarterly figures and, in some cases, year-to-date and comparative (last year's quarter to this year's quarter) results.
+
+Most companies have an accounting period that ends with the calendar year: Dec. 31 and quarters that end on March 31, June 30, September 30, and December 31. Quarterly reports are typically filed within a few weeks of a quarter's end.
+
+Some companies follow a different financial calendar and report year-end figures at different times. For example, Apple's (AAPL) fiscal year runs from October through September of the following year. See below how the quarterly reporting cycle differs.
+
+Filing Quarterly Reports
+Quarterly reports include key accounting and financial data for a company, including gross revenue, net profit, operational expenses, and cash flow. The SEC requires issuers of publicly traded shares quarterly reports on Form 10-Q within 60 days of the end of the applicable period. Quarterly reports typically include less detailed information and disclosures than annual reports.
+1
+
+Quarterly reports are usually accompanied by presentations from a company's management where key performance indicator data are presented to investors and analysts. Corporate management usually provides forward-looking statements about future financial results as well. These presentations are routinely followed by question-and-answer periods.
+
+Analysts often publish estimates of key metrics for future reporting periods. Financial publications average these estimates to arrive at street consensus estimates. Companies beat expectations when they exceed these estimates and meet expectations when they are in line with them. Companies whose results are below estimates are said to have missed expectations.
+
+Requirements for Quarterly Reports
+There are some very common features to quarterly reports. They typically include summarized financial statements so financial analysts can update their expectations about a company's share price. There may also be an:
+
+Executive summary
+Goals and objectives
+Highlights and new and ongoing challenges
+Quarterly reports may include strategies that companies plan to or have used to overcome them. If relevant, the report may discuss data from previous reports and provide a comparison between them and the current one.
+
+Preparing a quarterly report takes time and may require extended research. Gathering financial and performance data from various sources will generally ensure that the quarterly report is as comprehensive as possible. Graphs and spreadsheets provide a visual representation of the data provided; they help to add context. Quarterly reports help investors and analysts gauge the health of a company by providing insight into a firm's performance.
+
+What Are Quarterly Reports Called?
+Quarterly reports are called Form 10-Q. They are financial documents or statements that highlight a company's financial performance over a quarter and reported to the public for review.
+
+Do Private Companies File Quarterly Reports?
+Private companies aren't obligated to file quarterly reports. This means they don't have to report any of their financial information they same way public companies do. But, private companies do have to file articles of incorporation in the state where they do business and annual tax returns.
+
+What Should I Look for In a Quarterly Report?
+A company's quarterly reports indicate its performance over the previous quarter. When you're reviewing the report, make sure you look at the financial statements (the balance sheet, income statement, and cash flow statement) along with the company's disclosures, forward-looking statements, and management discussion.
+
+The Bottom Line
+Public companies are required to file financial reports as per the SEC. These reports include quarterly filings that highlight the financial performance of companies for the previous quarter. They contain valuable information that points to the financial health of companies as well as their plans for the future. As an investor, it's important to review these reports to ensure that the stocks in your portfolio make sense for your financial goals.
