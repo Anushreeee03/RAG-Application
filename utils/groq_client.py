@@ -4,6 +4,11 @@ import time
 from dotenv import load_dotenv
 
 load_dotenv()  # Load variables from .env
+import streamlit as st
+
+api_key = st.secrets["GROQ_API_KEY"]
+groq_client = Groq(api_key=api_key)
+
 
 groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
