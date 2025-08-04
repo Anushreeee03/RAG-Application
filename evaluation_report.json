@@ -1,0 +1,71 @@
+{
+  "metrics": {
+    "accuracy": 0.9,
+    "precision": 1.0,
+    "recall": 0.9,
+    "f1": 0.947,
+    "avg_latency_sec": 1.366
+  },
+  "results": [
+    {
+      "question": "What was Infosys\u2019s net income in Q1?",
+      "prediction": "763 million",
+      "ground_truth": "$763 million",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "What was TCS\u2019s revenue?",
+      "prediction": "195,772",
+      "ground_truth": "\u20b9195,772 Cr",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "What was Reliance\u2019s total revenue?",
+      "prediction": "10,00,122 crore",
+      "ground_truth": "\u20b910,00,122 Cr",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "What was the earnings per share for TCS?",
+      "prediction": "103.62",
+      "ground_truth": "\u20b9103.62",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "How many employees did TCS have?",
+      "prediction": "592,195",
+      "ground_truth": "592,195",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "Give the cash balance of TCS.",
+      "prediction": "12,488 Cr",
+      "ground_truth": "\u20b912,488 Cr",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "Revenue of Data Company Ltd in FY2024?",
+      "prediction": "1100.3",
+      "ground_truth": "83,927 Cr",
+      "fuzzy_score": 0.18181818181818182
+    },
+    {
+      "question": "Netflix gross profit in Q1 2025?",
+      "prediction": "65197",
+      "ground_truth": "65197",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "What was the operating margin of TCS?",
+      "prediction": "25%",
+      "ground_truth": "25%",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "What is Infosys\u2019s market share?",
+      "prediction": "I don\u2019t know based on the provided data.",
+      "ground_truth": "I don\u2019t know based on the provided data.",
+      "fuzzy_score": 1.0
+    }
+  ]
+}
