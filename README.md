@@ -131,11 +131,11 @@ python evaluate_rag.py
 
 ```json
 {
-  "accuracy": 1.0,
+  "accuracy": 0.9,
   "precision": 1.0,
-  "recall": 1.0,
-  "f1": 1.0,
-  "avg_latency_sec": 0.66
+  "recall": 0.9,
+  "f1": 0.947,
+  "avg_latency_sec": 0.985
 }
 ```
 
