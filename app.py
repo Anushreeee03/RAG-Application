@@ -12,7 +12,7 @@ from utils.groq_client import query_groq
 from rag_utils import fuzzy_match, get_eval_metrics
 
 # --- Page Config & Theme-Aware Styling ---
-st.set_page_config(page_title="📈 FinBot", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="FinBot", page_icon="🤖", layout="wide")
 
 st.markdown("""
     <style>
@@ -80,8 +80,7 @@ index, chunks, embedder = load()
 
 # === Sidebar
 with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/4712/4712100.png", width=80)
-    st.title("🤖 FinBot")
+    st.title("FinBot Chat")
     st.markdown("**Suggested Questions:**")
     example_questions = [
         "What was Infosys’s net income in Q1?",
@@ -96,10 +95,10 @@ with st.sidebar:
     st.caption("FinBot v1.0 | FAISS + GROQ")
 
 # === Header
-st.markdown('<h1 style="font-size: 2.6em; color: #1a73e8;">📈 FinBot</h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="font-size: 1.6em; ">📈Quaterly Financial Report RAG</h1>', unsafe_allow_html=True)
 
 # === Query Input
-query = st.text_area("🔍 Your Question:", value=st.session_state.get("query", ""), height=80)
+query = st.text_area("🔍Ready to review the numbers? Type your financial query below:", value=st.session_state.get("query", ""), height=80)
 
 # === Answering
 if st.button("🚀 Get Answer") and query.strip():
