@@ -4,11 +4,11 @@
     "precision": 1.0,
     "recall": 0.75,
     "f1": 0.857,
-    "avg_latency_sec": 0.536
+    "avg_latency_sec": 0.506
   },
   "results": [
     {
-      "question": "What was Infosys\u2019s net income in Q1?",
+      "question": "What was Infosys\u2019s net income?",
       "prediction": "763 million",
       "ground_truth": "$763 million",
       "fuzzy_score": 1.0
@@ -21,7 +21,7 @@
     },
     {
       "question": "What was Reliance\u2019s total revenue?",
-      "prediction": "1000122",
+      "prediction": "\u20b910,00,122 crore",
       "ground_truth": "\u20b910,00,122 Cr",
       "fuzzy_score": 1.0
     },
@@ -69,15 +69,15 @@
     },
     {
       "question": "What was the cash flow from operations for Netflix?",
-      "prediction": "I don't know based on the provided data. The data provided does not mention Netflix or any financial information related to the company. The provided data only includes information about Reliance and Infosys.",
+      "prediction": "I don't know based on the provided data. There is no information on Netflix in the provided context. The data provided is related to Reliance and Infosys, but not Netflix.",
       "ground_truth": "$2.86 billion",
       "fuzzy_score": 0.2222222222222222
     },
     {
       "question": "What is the EPS (Earnings Per Share) for Netflix?",
-      "prediction": "I don't know based on the provided data. The provided data only contains information about the company \"Company Ltd.\" and does not mention Netflix.",
+      "prediction": "I don't know based on the provided data.",
       "ground_truth": "$5.28",
-      "fuzzy_score": 0.2222222222222222
+      "fuzzy_score": 0.4
     }
   ]
 }

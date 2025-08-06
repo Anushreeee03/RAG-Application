@@ -83,7 +83,7 @@ with st.sidebar:
     st.title(" FinBot Chat")
     st.markdown("**Suggested Questions:**")
     example_questions = [
-        "What was Infosys’s net income in Q1?",
+        "What was Infosys’s net income?",
         "What was TCS’s revenue?",
         "What was Reliance’s total revenue?",
     ]
