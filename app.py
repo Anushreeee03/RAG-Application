@@ -12,7 +12,7 @@ from utils.groq_client import query_groq
 from rag_utils import fuzzy_match, get_eval_metrics
 
 # --- Page Config & Theme-Aware Styling ---
-st.set_page_config(page_title="FinBot", page_icon="🤖", layout="wide")
+st.set_page_config(page_title="📈 FinBot", page_icon="🤖", layout="wide")
 
 st.markdown("""
     <style>
@@ -80,7 +80,7 @@ index, chunks, embedder = load()
 
 # === Sidebar
 with st.sidebar:
-    st.title("FinBot Chat")
+    st.title(" FinBot Chat")
     st.markdown("**Suggested Questions:**")
     example_questions = [
         "What was Infosys’s net income in Q1?",
@@ -95,10 +95,10 @@ with st.sidebar:
     st.caption("FinBot v1.0 | FAISS + GROQ")
 
 # === Header
-st.markdown('<h1 style="font-size: 1.6em; ">📈Quaterly Financial Report RAG</h1>', unsafe_allow_html=True)
+st.markdown('<h1 style="font-size: 1.6em; ">📈 Quarterly Financial Report </h1>', unsafe_allow_html=True)
 
 # === Query Input
-query = st.text_area("🔍Ready to review the numbers? Type your financial query below:", value=st.session_state.get("query", ""), height=80)
+query = st.text_area("🔍 Ready to review the numbers? Type your financial query below:", value=st.session_state.get("query", ""), height=80)
 
 # === Answering
 if st.button("🚀 Get Answer") and query.strip():
@@ -140,11 +140,15 @@ Context:
             insight = query_groq(insight_prompt)
             st.info(f"💡 {insight}")
 
-       
+        # ✅ Inline Evaluation
+        
+        st.markdown("### 📚 Sources Used:")
+        for m in matches:
+            st.markdown(f"""<div class='finbot-source'><strong>📄 {m['source']}</strong><br>{m['text'][:300]}{'...' if len(m['text']) > 300 else ''}</div>""", unsafe_allow_html=True)
+
 # === Evaluation Dashboard
 if show_eval:
     st.markdown("## 📊 Evaluation Dashboard")
-
     if st.button("🔁 Run Evaluation Now"):
         eval_path = Path("evaluation_dataset.jsonl")
         if not eval_path.exists():
@@ -154,31 +158,21 @@ if show_eval:
                 import subprocess
                 subprocess.run(["python", "evaluate_rag.py"])
 
-    report_path = Path("evaluation_report.json")
-    if report_path.exists():
-        with open(report_path, "r", encoding="utf-8") as f:
-            report = json.load(f)
-            metrics = report["metrics"]
-            results = report["results"]
+            report_path = Path("evaluation_report.json")
+            if report_path.exists():
+                with open(report_path, "r", encoding="utf-8") as f:
+                    report = json.load(f)
+                    metrics = report["metrics"]
 
-        # Summary
-        st.subheader("📈 Summary Metrics")
-        c1, c2, c3, c4, c5 = st.columns(5)
-        c1.metric("Accuracy", metrics["accuracy"])
-        c2.metric("Precision", metrics["precision"])
-        c3.metric("Recall", metrics["recall"])
-        c4.metric("F1 Score", metrics["f1"])
-        c5.metric("Avg Latency (s)", metrics["avg_latency_sec"])
-        st.success(f"✅ Evaluation Complete on {len(results)} questions")
+                st.subheader("📈 Evaluation Metrics")
+                c1, c2, c3, c4, c5 = st.columns(5)
+                c1.metric("Accuracy", metrics["accuracy"])
+                c2.metric("Precision", metrics["precision"])
+                c3.metric("Recall", metrics["recall"])
+                c4.metric("F1 Score", metrics["f1"])
+                c5.metric("Avg Latency (s)", metrics["avg_latency_sec"])
 
-        st.markdown("---")
-        st.markdown("### 📝 Detailed Evaluation Results")
-
-        for i, result in enumerate(results):
-            with st.expander(f"🔍 Q{i+1}: {result['question']}"):
-                st.markdown(f"**Question:** {result['question']}")
-                st.markdown(f"**Prediction:** {result['prediction']}")
-                st.markdown(f"**Ground Truth:** {result['ground_truth']}")
-                st.markdown(f"**Fuzzy Score:** `{result['fuzzy_score']:.2f}`")
-    else:
-        st.error("❌ evaluation_report.json not found.")
+                st.success("✅ Evaluation Complete")
+                st.code(json.dumps(metrics, indent=2))
+            else:
+                st.error("❌ evaluation_report.json not found.")
