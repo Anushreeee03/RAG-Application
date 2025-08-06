@@ -1,10 +1,4 @@
-Here’s your **complete `README.md`** file for your **FinBot RAG application**, tailored to your exact project setup, tools, files, and workflow.
 
-You can copy and paste this directly into a file named `README.md` in your project directory:
-
----
-
-````markdown
 # 📊 FinBot: A Retrieval-Augmented Generation (RAG) System for Financial Reports
 
 FinBot is a GenAI-powered assistant built as part of a NexTurn internship project. It answers natural language queries about quarterly financial reports from real-world companies such as Infosys, TCS, Reliance, and Netflix.
