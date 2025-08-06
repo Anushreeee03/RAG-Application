@@ -11,7 +11,64 @@ from utils.indexer import load_faiss_index
 from utils.groq_client import query_groq
 from rag_utils import fuzzy_match, get_eval_metrics
 
+# --- Page Config & Theme-Aware Styling ---
 st.set_page_config(page_title="📈 FinBot", page_icon="🤖", layout="wide")
+
+st.markdown("""
+    <style>
+        html, body, [class*="css"] {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Sidebar gradient */
+        .css-1d391kg {
+            background: linear-gradient(to bottom, rgba(30,144,255,0.1), transparent);
+        }
+
+        /* Primary button */
+        button[kind="primary"] {
+            background-color: #1a73e8 !important;
+            color: white !important;
+            border-radius: 8px !important;
+            padding: 10px 16px !important;
+            font-weight: bold;
+        }
+
+        /* FinBot response card */
+        .finbot-card {
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 10px;
+            background-color: rgba(255,255,255,0.05);
+            border-left: 5px solid #1a73e8;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            color: inherit;
+        }
+
+        /* Source context card */
+        .finbot-source {
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: rgba(255,255,255,0.03);
+            border-left: 4px solid #2196f3;
+            color: inherit;
+        }
+
+        /* Metric cards */
+        .stMetric {
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Text area */
+        textarea {
+            border-radius: 8px !important;
+            border: 1px solid rgba(200,200,200,0.3) !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 @st.cache_resource
 def load():
@@ -38,8 +95,10 @@ with st.sidebar:
     show_eval = st.checkbox("📊 Show Evaluation Dashboard")
     st.caption("FinBot v1.0 | FAISS + GROQ")
 
+# === Header
+st.markdown('<h1 style="font-size: 2.6em; color: #1a73e8;">📈 FinBot</h1>', unsafe_allow_html=True)
+
 # === Query Input
-st.markdown('<h1 style="font-size: 2.4em;">📈 FinBot</h1>', unsafe_allow_html=True)
 query = st.text_area("🔍 Your Question:", value=st.session_state.get("query", ""), height=80)
 
 # === Answering
@@ -69,17 +128,7 @@ A:"""
         answer = query_groq(prompt).strip()
         latency = round(time.time() - start_time, 2)
 
-        st.markdown(f"""
-        <div style='
-            padding: 16px;
-            border-radius: 8px;
-            background-color: rgba(240,240,240,0.1);
-            border: 1px solid rgba(200,200,200,0.3);
-            color: inherit;
-        '>
-        <strong>🤖 FinBot:</strong><br>{answer}
-        </div>
-        """, unsafe_allow_html=True)
+        st.markdown(f"""<div class='finbot-card'><strong>🤖 FinBot:</strong><br>{answer}</div>""", unsafe_allow_html=True)
 
         # 🔍 Insight Mode
         if insight_mode and "i don't know" not in answer.lower():
@@ -114,18 +163,7 @@ Context:
 
         st.markdown("### 📚 Sources Used:")
         for m in matches:
-            st.markdown(f"""
-            <div style='
-                padding: 10px;
-                margin: 8px 0;
-                border-left: 4px solid #1a73e8;
-                border-radius: 5px;
-                background-color: rgba(255,255,255,0.05);
-                color: inherit;
-            '>
-            <strong>📄 {m['source']}</strong><br>{m['text'][:300]}{'...' if len(m['text']) > 300 else ''}
-            </div>
-            """, unsafe_allow_html=True)
+            st.markdown(f"""<div class='finbot-source'><strong>📄 {m['source']}</strong><br>{m['text'][:300]}{'...' if len(m['text']) > 300 else ''}</div>""", unsafe_allow_html=True)
 
 # === Evaluation Dashboard
 if show_eval:

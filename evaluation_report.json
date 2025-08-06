@@ -1,10 +1,10 @@
 {
   "metrics": {
-    "accuracy": 0.9,
+    "accuracy": 0.8,
     "precision": 1.0,
-    "recall": 0.9,
-    "f1": 0.947,
-    "avg_latency_sec": 2.399
+    "recall": 0.8,
+    "f1": 0.889,
+    "avg_latency_sec": 0.592
   },
   "results": [
     {
@@ -15,13 +15,13 @@
     },
     {
       "question": "What was TCS\u2019s revenue?",
-      "prediction": "\u20b9195,772 Cr",
+      "prediction": "195,772",
       "ground_truth": "\u20b9195,772 Cr",
       "fuzzy_score": 1.0
     },
     {
       "question": "What was Reliance\u2019s total revenue?",
-      "prediction": "\u20b910,00,122 crore",
+      "prediction": "10,00,122 crore",
       "ground_truth": "\u20b910,00,122 Cr",
       "fuzzy_score": 1.0
     },
@@ -39,9 +39,9 @@
     },
     {
       "question": "Give the cash balance of TCS.",
-      "prediction": "12,488 Cr",
+      "prediction": "Q: Give the cash balance of TCS.\nA: \u20b912,488 Cr",
       "ground_truth": "\u20b912,488 Cr",
-      "fuzzy_score": 1.0
+      "fuzzy_score": 0.8333333333333334
     },
     {
       "question": "Revenue of Data Company Ltd in FY2024?",
@@ -63,7 +63,7 @@
     },
     {
       "question": "What is Infosys\u2019s market share?",
-      "prediction": "I don't know based on the provided data.",
+      "prediction": "I don\u2019t know based on the provided data.",
       "ground_truth": "I don\u2019t know based on the provided data.",
       "fuzzy_score": 1.0
     }
