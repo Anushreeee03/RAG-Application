@@ -141,29 +141,7 @@ Context:
             insight = query_groq(insight_prompt)
             st.info(f"💡 {insight}")
 
-        # ✅ Inline Evaluation
-        eval_path = Path("evaluation_dataset.jsonl")
-        if eval_path.exists():
-            with open(eval_path, "r", encoding="utf-8") as f:
-                eval_data = [json.loads(line) for line in f if line.strip()]
-                eval_lookup = {r["question"].strip().lower(): r["answer"] for r in eval_data}
-
-            if query.lower().strip() in eval_lookup:
-                true_ans = eval_lookup[query.lower().strip()]
-                metrics = get_eval_metrics(answer, true_ans)
-
-                st.subheader("📏 Evaluation Metrics (per query)")
-                c1, c2, c3, c4, c5 = st.columns(5)
-                c1.metric("Fuzzy", metrics["fuzzy"])
-                c2.metric("Accuracy", metrics["accuracy"])
-                c3.metric("Precision", metrics["precision"])
-                c4.metric("Recall", metrics["recall"])
-                c5.metric("F1 Score", metrics["f1"])
-                st.success(f"✅ Ground Truth: `{true_ans}`")
-
-        st.markdown("### 📚 Sources Used:")
-        for m in matches:
-            st.markdown(f"""<div class='finbot-source'><strong>📄 {m['source']}</strong><br>{m['text'][:300]}{'...' if len(m['text']) > 300 else ''}</div>""", unsafe_allow_html=True)
+        
 
 # === Evaluation Dashboard
 if show_eval:

@@ -4,7 +4,7 @@
     "precision": 1.0,
     "recall": 0.9,
     "f1": 0.947,
-    "avg_latency_sec": 0.98
+    "avg_latency_sec": 0.693
   },
   "results": [
     {
@@ -15,13 +15,13 @@
     },
     {
       "question": "What was TCS\u2019s revenue?",
-      "prediction": "The answer is: \u20b9195,772 Cr.",
+      "prediction": "\u20b9195,772 Cr",
       "ground_truth": "\u20b9195,772 Cr",
-      "fuzzy_score": 0.8571428571428571
+      "fuzzy_score": 1.0
     },
     {
       "question": "What was Reliance\u2019s total revenue?",
-      "prediction": "10,00,122",
+      "prediction": "\u20b910,00,122 crore",
       "ground_truth": "\u20b910,00,122 Cr",
       "fuzzy_score": 1.0
     },
@@ -39,7 +39,7 @@
     },
     {
       "question": "Give the cash balance of TCS.",
-      "prediction": "12,488 Cr",
+      "prediction": "A: \u20b912,488 Cr",
       "ground_truth": "\u20b912,488 Cr",
       "fuzzy_score": 1.0
     },
