@@ -1,10 +1,10 @@
 {
   "metrics": {
-    "accuracy": 0.8,
+    "accuracy": 0.9,
     "precision": 1.0,
-    "recall": 0.8,
-    "f1": 0.889,
-    "avg_latency_sec": 0.592
+    "recall": 0.9,
+    "f1": 0.947,
+    "avg_latency_sec": 0.98
   },
   "results": [
     {
@@ -15,13 +15,13 @@
     },
     {
       "question": "What was TCS\u2019s revenue?",
-      "prediction": "195,772",
+      "prediction": "The answer is: \u20b9195,772 Cr.",
       "ground_truth": "\u20b9195,772 Cr",
-      "fuzzy_score": 1.0
+      "fuzzy_score": 0.8571428571428571
     },
     {
       "question": "What was Reliance\u2019s total revenue?",
-      "prediction": "10,00,122 crore",
+      "prediction": "10,00,122",
       "ground_truth": "\u20b910,00,122 Cr",
       "fuzzy_score": 1.0
     },
@@ -39,9 +39,9 @@
     },
     {
       "question": "Give the cash balance of TCS.",
-      "prediction": "Q: Give the cash balance of TCS.\nA: \u20b912,488 Cr",
+      "prediction": "12,488 Cr",
       "ground_truth": "\u20b912,488 Cr",
-      "fuzzy_score": 0.8333333333333334
+      "fuzzy_score": 1.0
     },
     {
       "question": "Revenue of Data Company Ltd in FY2024?",

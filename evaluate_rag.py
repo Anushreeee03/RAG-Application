@@ -24,15 +24,12 @@ def evaluate_rag(eval_file="evaluation_dataset.jsonl", chunks_path="chunks.json"
     predictions, ground_truths, fuzzy_scores = [], [], []
     total_latency = 0
 
-    for i, item in enumerate(records):
+    for item in records:
         question = item.get("question", "").strip()
         true_answer = item.get("answer", "").strip()
 
         if not question or not true_answer:
-            print(f"[SKIPPED] Missing question or answer in record {i}")
             continue
-
-        print(f"\n🔍 Q{i+1}: {question}")
 
         q_vec = embedder.encode([question], normalize_embeddings=True).astype("float32")
         chunk_vecs = embedder.encode([c["text"] for c in chunks], normalize_embeddings=True).astype("float32")
@@ -41,8 +38,8 @@ def evaluate_rag(eval_file="evaluation_dataset.jsonl", chunks_path="chunks.json"
         top_chunks = [chunks[idx] for idx in top_k_indices if scores[idx] > 0.2]
 
         if not top_chunks:
-            print("⚠️ No relevant context found.")
             prediction = "I don’t know based on the provided data."
+            latency = 0
         else:
             context = "\n".join([f"{i+1}. {c['text']}" for i, c in enumerate(top_chunks)])
             prompt = f"""
@@ -64,12 +61,6 @@ Answer:"""
         ground_truths.append(true_answer)
         fuzzy_scores.append(fuzzy_score)
 
-        print(f"🤖 Prediction: {prediction}")
-        print(f"✅ Ground Truth: {true_answer}")
-        print(f"🔁 Fuzzy Score: {fuzzy_score:.2f}")
-        print(f"⏱️ Latency: {latency:.2f} sec")
-
-    # Binary evaluation: consider correct if fuzzy score ≥ 0.85
     y_true = [1] * len(predictions)
     y_pred = [1 if score >= 0.85 else 0 for score in fuzzy_scores]
 
@@ -83,7 +74,6 @@ Answer:"""
         "avg_latency_sec": avg_latency
     }
 
-    # Store detailed results
     results = [
         {
             "question": q,
