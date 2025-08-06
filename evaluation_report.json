@@ -4,7 +4,7 @@
     "precision": 1.0,
     "recall": 0.75,
     "f1": 0.857,
-    "avg_latency_sec": 0.506
+    "avg_latency_sec": 0.604
   },
   "results": [
     {
@@ -39,7 +39,7 @@
     },
     {
       "question": "Give the cash balance of TCS.",
-      "prediction": "12,488 Cr",
+      "prediction": "\u20b912,488 Cr",
       "ground_truth": "\u20b912,488 Cr",
       "fuzzy_score": 1.0
     },
@@ -63,19 +63,19 @@
     },
     {
       "question": "What is Infosys\u2019s market share?",
-      "prediction": "I don\u2019t know based on the provided data.",
+      "prediction": "I don't know based on the provided data.",
       "ground_truth": "I don\u2019t know based on the provided data.",
       "fuzzy_score": 1.0
     },
     {
       "question": "What was the cash flow from operations for Netflix?",
-      "prediction": "I don't know based on the provided data. There is no information on Netflix in the provided context. The data provided is related to Reliance and Infosys, but not Netflix.",
+      "prediction": "I don\u2019t know based on the provided data. There is no mention of Netflix or any relevant data related to their cash flows. The data provided is related to Reliance and Infosys.",
       "ground_truth": "$2.86 billion",
       "fuzzy_score": 0.2222222222222222
     },
     {
       "question": "What is the EPS (Earnings Per Share) for Netflix?",
-      "prediction": "I don't know based on the provided data.",
+      "prediction": "I don\u2019t know based on the provided data.",
       "ground_truth": "$5.28",
       "fuzzy_score": 0.4
     }

@@ -149,6 +149,7 @@ Context:
 # === Evaluation Dashboard
 if show_eval:
     st.markdown("## 📊 Evaluation Dashboard")
+
     if st.button("🔁 Run Evaluation Now"):
         eval_path = Path("evaluation_dataset.jsonl")
         if not eval_path.exists():
@@ -158,21 +159,33 @@ if show_eval:
                 import subprocess
                 subprocess.run(["python", "evaluate_rag.py"])
 
-            report_path = Path("evaluation_report.json")
-            if report_path.exists():
-                with open(report_path, "r", encoding="utf-8") as f:
-                    report = json.load(f)
-                    metrics = report["metrics"]
+    report_path = Path("evaluation_report.json")
+    if report_path.exists():
+        with open(report_path, "r", encoding="utf-8") as f:
+            report = json.load(f)
+            metrics = report["metrics"]
+            results = report["results"]
 
-                st.subheader("📈 Evaluation Metrics")
-                c1, c2, c3, c4, c5 = st.columns(5)
-                c1.metric("Accuracy", metrics["accuracy"])
-                c2.metric("Precision", metrics["precision"])
-                c3.metric("Recall", metrics["recall"])
-                c4.metric("F1 Score", metrics["f1"])
-                c5.metric("Avg Latency (s)", metrics["avg_latency_sec"])
+        # 📈 Summary Metrics
+        st.subheader("📈 Summary Evaluation Metrics")
+        c1, c2, c3, c4, c5 = st.columns(5)
+        c1.metric("Accuracy", metrics["accuracy"])
+        c2.metric("Precision", metrics["precision"])
+        c3.metric("Recall", metrics["recall"])
+        c4.metric("F1 Score", metrics["f1"])
+        c5.metric("Avg Latency (s)", metrics["avg_latency_sec"])
+        st.success("✅ Evaluation Complete")
 
-                st.success("✅ Evaluation Complete")
-                st.code(json.dumps(metrics, indent=2))
-            else:
-                st.error("❌ evaluation_report.json not found.")
+        # 📋 Detailed Table
+        st.markdown("### 📋 Per-Question Evaluation Results")
+        st.dataframe(results, use_container_width=True)
+
+        # Optional: Download button
+        st.download_button(
+            label="📥 Download Full Report (JSON)",
+            data=json.dumps(report, indent=2),
+            file_name="evaluation_report.json",
+            mime="application/json"
+        )
+    else:
+        st.error("❌ evaluation_report.json not found.")
