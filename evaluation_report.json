@@ -1,10 +1,10 @@
 {
   "metrics": {
-    "accuracy": 0.9,
+    "accuracy": 0.833,
     "precision": 1.0,
-    "recall": 0.9,
-    "f1": 0.947,
-    "avg_latency_sec": 0.693
+    "recall": 0.833,
+    "f1": 0.909,
+    "avg_latency_sec": 0.511
   },
   "results": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "question": "What was TCS\u2019s revenue?",
-      "prediction": "\u20b9195,772 Cr",
+      "prediction": "195,772",
       "ground_truth": "\u20b9195,772 Cr",
       "fuzzy_score": 1.0
     },
@@ -33,13 +33,13 @@
     },
     {
       "question": "How many employees did TCS have?",
-      "prediction": "592,195",
+      "prediction": "592195",
       "ground_truth": "592,195",
       "fuzzy_score": 1.0
     },
     {
       "question": "Give the cash balance of TCS.",
-      "prediction": "A: \u20b912,488 Cr",
+      "prediction": "12,488 crore",
       "ground_truth": "\u20b912,488 Cr",
       "fuzzy_score": 1.0
     },
@@ -66,6 +66,18 @@
       "prediction": "I don\u2019t know based on the provided data.",
       "ground_truth": "I don\u2019t know based on the provided data.",
       "fuzzy_score": 1.0
+    },
+    {
+      "question": "Netflix gross profit in Q1 2025?",
+      "prediction": "65197",
+      "ground_truth": "65197",
+      "fuzzy_score": 1.0
+    },
+    {
+      "question": "What is the EPS (Earnings Per Share) for Netflix?",
+      "prediction": "I don't know based on the provided data, as the data does not belong to Netflix.",
+      "ground_truth": "$5.28",
+      "fuzzy_score": 0.4
     }
   ]
 }
