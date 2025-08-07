@@ -43,7 +43,15 @@ def evaluate_rag(eval_file="evaluation_dataset.jsonl", chunks_path="chunks.json"
         else:
             context = "\n".join([f"{i+1}. {c['text']}" for i, c in enumerate(top_chunks)])
             prompt = f"""
-Answer ONLY using a short numeric or currency value from this context.
+You are a financial analyst. Given the context, answer ONLY with a short numeric or currency value.
+
+Example:
+Context:
+1. Infosys reported a net income of $763 million in Q1 FY2025.
+Question: What was Infosys’s net income in Q1?
+Answer: $763 million
+
+Now answer this:
 
 Context:
 {context}
